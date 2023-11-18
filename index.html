@@ -59,10 +59,10 @@
 <!-- Javascript to handle forms-->
 <script>
     document.getElementById('myForm').onsubmit = function(event) {
-            event.preventDefault();
-            var name = document.getElementById('nameInput').value;
-            alert('Name entered: ' + name);
-        };
+        event.preventDefault(); // Prevents the default form submission action
+        var name = document.getElementById('nameInput').value;
+        alert('Name entered: ' + name);
+    };
     </script>
 </body>
 </html>
