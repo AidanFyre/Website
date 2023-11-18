@@ -58,11 +58,11 @@
 <!-- Javascript to handle forms-->
 <script>
     document.getElementById('myForm').onsubmit = function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevents the default form submission action
         var name = document.getElementById('nameInput').value;
         alert('Name entered: ' + name);
-    }
-</script>
+    };
+    </script>
 
 <!-- HTML Elements for Interaction-->
 <button onclick="changeText()">Click Me</button>
