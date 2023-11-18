@@ -3,15 +3,20 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+
+.content {
     display: flex;
+    flex-direction: column; /* Aligns items vertically */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
     color: #333;
-    margin-bottom: 20px; /* Adjust this value as needed */
+    margin-bottom: 20px; /* Adjust spacing below header */
 }
 
 p {
