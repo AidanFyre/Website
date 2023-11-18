@@ -49,6 +49,7 @@ p {
     border-radius: 4px;
     margin-bottom: 20px; /* Adds space after each input field */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    text-align: center; /* Centers the text inside the input fields */
 }
 
 /* Style for the submit button */
