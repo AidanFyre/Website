@@ -50,6 +50,20 @@
 <footer>
     <p>Apex Legends Renders</p>
 </footer>
+<form is=""MyForm">
+<input type="text" id="nameInput" placeholder="Enter your name">
+<input type="submit" value="Submit">
+</form>
+
+<!-- Javascript to handle forms-->
+<script>
+    document.getElementById('myForm').onsubmit = function(event) {
+        event.preventDefault();
+        var name = document.getElementById('nameInput').value;
+        alert('Name entered: ' + name);
+    }
+</script>
+
 <!-- HTML Elements for Interaction-->
 <button onclick="changeText()">Click Me</button>
 <p id="text">Original Text</p>
