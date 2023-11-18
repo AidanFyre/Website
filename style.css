@@ -41,13 +41,13 @@ p {
     color: #333;
 }
 
-/* Styles for input fields */
+/* Styles for all text input fields */
 #renderRequestForm input[type="text"] {
+    width: calc(100% - 20px); /* Adjusts the width to fit the form */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 20px; /* Adds space after each input field */
-    width: calc(100% - 20px); /* Adjusts the width to fit the form */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
