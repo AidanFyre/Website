@@ -1,4 +1,7 @@
-/* Existing body styles */
+header {
+    align-content: center;
+    background-color: transparent !important;
+  }
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,7 +10,6 @@ body {
     height: 100vh;
 }
 
-/* New header styles */
 #header {
     display: flex;
     justify-content: space-between;
@@ -22,11 +24,6 @@ body {
     margin: 0; /* Adjust as needed */
 }
 
-#darkModeToggle {
-    /* Existing styles for the button */
-}
-
-/* Continue with existing styles */
 .content {
     display: flex;
     flex-direction: column;
@@ -154,6 +151,7 @@ body.dark-mode .drop-area {
     text-align: center;
 }
 
+
 /* Style for the submit button */
 #renderRequestForm input[type="submit"] {
     background-color: #007bff;
@@ -166,6 +164,7 @@ body.dark-mode .drop-area {
 }
 #renderRequestForm input[type="submit"]:hover {
     background-color: #0056b3;
+
 }
 
 .drop-area {
