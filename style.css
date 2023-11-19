@@ -64,6 +64,31 @@ p {
     width: 100%;
 }
 
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+#renderRequestForm input[type="file"] {
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the file input */
+    width: calc(100% - 20px); /* Adjusts the width to fit the form */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 #renderRequestForm input[type="submit"]:hover {
     background-color: #0056b3;
 }
