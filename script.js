@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const form = document.getElementById('renderRequestForm');
+     const dropArea = document.getElementById('dropArea');
     const imageUpload = document.getElementById('imageUpload');
-    const dropArea = document.getElementById('dropArea'); // Ensure you have this element in your HTML
+
+    // Add click event listener to the drop area
+    dropArea.addEventListener('click', () => imageUpload.click());
+
+    const form = document.getElementById('renderRequestForm');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault(); // Prevents the default form submission action
