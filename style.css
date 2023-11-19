@@ -1,3 +1,4 @@
+/* Existing body styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -25,6 +26,7 @@ body {
     /* Existing styles for the button */
 }
 
+/* Continue with existing styles */
 .content {
     display: flex;
     flex-direction: column;
@@ -46,7 +48,6 @@ body.dark-mode {
     background-color: #101010;
     color: #ffffff;
 }
-
 /* Styles for the form container in dark mode */
 body.dark-mode #renderRequestForm {
     background-color: #212121 !important; /* Change this color to a lighter shade for dark mode */
@@ -163,7 +164,6 @@ body.dark-mode .drop-area {
     cursor: pointer;
     width: 100%;
 }
-
 #renderRequestForm input[type="submit"]:hover {
     background-color: #0056b3;
 }
@@ -178,5 +178,20 @@ body.dark-mode .drop-area {
 }
 
 .drop-area:hover {
-    background-color: #e9e9e9
+    background-color: #e9e9e9;
+}
+
+/* Styles for the image preview */
+#preview img {
+    display: block;
+    margin: 20px auto; /* Center the image horizontally */
+    max-width: 200px;
+    max-height: 200px;
+}
+
+@media screen and (max-width: 480px) {
+    #renderRequestForm {
+        max-width: 95%;
+        margin: 20px auto;
+    }
 }
