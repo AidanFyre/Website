@@ -29,7 +29,7 @@ body.dark-mode {
 }
 /* Styles for the form container in dark mode */
 body.dark-mode #renderRequestForm {
-    background-color: #4f4f4f !important; /* Change this color to a lighter shade for dark mode */
+    background-color: #212121 !important; /* Change this color to a lighter shade for dark mode */
     color: #ffffff; /* White text color for the form */
 }
 
