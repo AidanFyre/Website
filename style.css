@@ -1,3 +1,17 @@
+/* CSS to make the header bar invisible in light mode */
+#header {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* CSS to make the header bar invisible in dark mode */
+body.dark-mode #header {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 /* Default styles (light mode) */
 body {
     font-family: Arial, sans-serif;
@@ -146,18 +160,4 @@ body.dark-mode .drop-area {
         max-width: 95%;
         margin: 20px auto;
     }
-}
-
-/* CSS to make the header bar invisible in light mode */
-#header {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* CSS to make the header bar invisible in dark mode */
-body.dark-mode #header {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
 }
