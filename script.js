@@ -83,7 +83,14 @@ function validateImage(file) {
 // Function to preview the image
 function previewImage(file) {
     const reader = new FileReader();
-    reader.readAsDataURL(file);
+
+    // Error handling for FileReader
+    reader.onerror = function (event) {
+        console.error("File could not be read! Code " + event.target.error.code);
+        // You can also show an alert or a message on the webpage
+        alert("Error reading file.");
+    };
+
     reader.onloadend = function () {
         const img = document.createElement('img');
         img.src = reader.result;
@@ -92,4 +99,7 @@ function previewImage(file) {
         document.getElementById('preview').innerHTML = '';
         document.getElementById('preview').appendChild(img);
     };
+
+    reader.readAsDataURL(file);
 }
+
