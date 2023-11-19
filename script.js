@@ -4,26 +4,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const darkModeIcon = document.getElementById("darkModeIcon");
 let isDarkMode = true; // Initial mode is dark (changed to true)
 
-// Function to toggle dark mode
-function toggleDarkMode() {
+// Function to enable dark mode
+function enableDarkMode() {
+    isDarkMode = true;
+    darkModeIcon.textContent = "brightness_2"; // Dark mode icon
+    // Add logic to switch to dark mode styles here
+    document.body.classList.add("dark-mode");
+}
+
+// Function to disable dark mode
+function disableDarkMode() {
+    isDarkMode = false;
+    darkModeIcon.textContent = "wb_sunny"; // Light mode icon
+    // Add logic to switch to light mode styles here
+    document.body.classList.remove("dark-mode");
+}
+
+// Initial call to set dark mode as default
+enableDarkMode();
+
+darkModeToggle.addEventListener("click", () => {
+    // Toggle dark mode state
     isDarkMode = !isDarkMode;
 
     // Update the icon based on the mode
     if (isDarkMode) {
-        darkModeIcon.textContent = "brightness_2"; // Dark mode icon
-        // Add logic to switch to dark mode styles here
-        document.body.classList.add("dark-mode");
+        enableDarkMode();
     } else {
-        darkModeIcon.textContent = "wb_sunny"; // Light mode icon
-        // Add logic to switch to light mode styles here
-        document.body.classList.remove("dark-mode");
+        disableDarkMode();
     }
-}
+});
 
-// Initial call to set dark mode as default
-toggleDarkMode();
-
-darkModeToggle.addEventListener("click", toggleDarkMode);
 
 
 
