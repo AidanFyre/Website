@@ -150,6 +150,14 @@ body.dark-mode .drop-area {
     background-color: #e9e9e9;
 }
 
+/* Styles for the image preview */
+#preview img {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 200px;
+    max-height: 200px;
+}
+
 @media screen and (max-width: 480px) {
     #renderRequestForm {
         max-width: 95%;
