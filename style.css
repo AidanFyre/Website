@@ -7,18 +7,17 @@ body {
 }
 
 #header {
-    position: relative;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     padding: 10px;
-    background-color: transparent !important;
+    background-color: transparent !important; /* Overriding any existing background color */
 }
 
 #header h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
+    flex-grow: 1;
     text-align: center;
+    margin: 0; /* Adjust as needed */
 }
 
 .content {
