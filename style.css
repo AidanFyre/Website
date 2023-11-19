@@ -65,6 +65,10 @@ body.dark-mode ::placeholder {
     color: #bbbbbb;
 }
 
+body.dark-mode #darkModeIcon {
+    transform: scaleX(-1);
+}
+
 /* Dark mode toggle button styles */
 #darkModeToggle {
     background-color: #007bff;
