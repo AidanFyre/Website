@@ -29,7 +29,8 @@ body.dark-mode {
 }
 
 body.dark-mode .content, 
-body.dark-mode #renderRequestForm {
+body.dark-mode #renderRequestForm,
+body.dark-mode .drop-area {
     background-color: #2d2d2d;
     color: #ffffff;
 }
@@ -86,7 +87,8 @@ body.dark-mode ::placeholder {
 body.dark-mode input[type="text"],
 body.dark-mode input[type="email"],
 body.dark-mode textarea,
-body.dark-mode label {
+body.dark-mode label,
+body.dark-mode .drop-area {
     transition: background-color 0.6s, color 0.3s, border-color 0.3s;
 }
 
