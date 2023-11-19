@@ -66,8 +66,9 @@ body.dark-mode ::placeholder {
 }
 
 /* Additional transition effect for form fields and labels */
-body.dark-mode input[type="text"],
-body.dark-mode input[type="email"],
+body.dark-mode input[type="legendName"],
+body.dark-mode input[type="legendSkin"],
+body.dark-mode input[type="legendPose"],
 body.dark-mode textarea,
 body.dark-mode label {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
