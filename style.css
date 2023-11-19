@@ -69,6 +69,14 @@ body.dark-mode #darkModeIcon {
     transform: scaleX(-1) rotate(30deg);
 }
 
+/* CSS to make the header bar invisible */
+#header {
+    background-color: transparent;
+    border: none; /* Remove any borders if present */
+    box-shadow: none; /* Remove any box shadow if present */
+}
+
+
 /* Dark mode toggle button styles */
 #darkModeToggle {
     background-color: #007bff;
