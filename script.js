@@ -2,23 +2,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const darkModeToggle = document.getElementById("darkModeToggle");
 const darkModeIcon = document.getElementById("darkModeIcon");
-let isDarkMode = false; // Initial mode is light
+let isDarkMode = true; // Initial mode is dark (changed to true)
 
-darkModeToggle.addEventListener("click", () => {
-    // Toggle dark mode state
+// Function to toggle dark mode
+function toggleDarkMode() {
     isDarkMode = !isDarkMode;
 
     // Update the icon based on the mode
     if (isDarkMode) {
-        darkModeIcon.textContent = "wb_sunny"; // Dark mode icon
+        darkModeIcon.textContent = "brightness_2"; // Dark mode icon
         // Add logic to switch to dark mode styles here
         document.body.classList.add("dark-mode");
     } else {
-        darkModeIcon.textContent = "brightness_2"; // Light mode icon
+        darkModeIcon.textContent = "wb_sunny"; // Light mode icon
         // Add logic to switch to light mode styles here
         document.body.classList.remove("dark-mode");
     }
-});
+}
+
+// Initial call to set dark mode as default
+toggleDarkMode();
+
+darkModeToggle.addEventListener("click", toggleDarkMode);
+
 
 
      const dropArea = document.getElementById('dropArea');
