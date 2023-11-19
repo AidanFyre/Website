@@ -139,30 +139,3 @@ function previewImage(file) {
 
     reader.readAsDataURL(file);
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('renderRequestForm'); // Replace with your form ID
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch('/api/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            const result = await response.json();
-            console.log(result.message);
-            // Handle success (e.g., show a success message)
-        } catch (error) {
-            console.error('Submission error:', error);
-            // Handle error (e.g., show an error message)
-        }
-    });
-});
