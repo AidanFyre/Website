@@ -7,7 +7,7 @@
 
 /* CSS to make the header bar invisible in dark mode */
 body.dark-mode #header {
-    background-color: transparent !important;
+    background-color: #101010 !important;
     border: none !important;
     box-shadow: none !important;
 }
