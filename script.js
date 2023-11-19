@@ -68,6 +68,7 @@ function handleDrop(e) {
 function handleFiles(files) {
     for (let i = 0, len = files.length; i < len; i++) {
         if (validateImage(files[i])) {
+            console.log('Image File:', files[i]); // Log the file object
             previewImage(files[i]);
         } else {
             alert('Please upload an image file.');
