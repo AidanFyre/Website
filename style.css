@@ -147,6 +147,10 @@ body.dark-mode .drop-area {
     cursor: pointer;
     width: 100%;
 }
+#renderRequestForm input[type="submit"]:hover {
+    background-color: #0056b3;
+
+}
 
 .drop-area {
     border: 2px dashed #ddd;
