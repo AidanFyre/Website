@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const icon = darkModeToggle.querySelector('i'); // Get the icon inside the button
+    const darkModeToggle = document.getElementById("darkModeToggle");
+const darkModeIcon = document.getElementById("darkModeIcon");
+let isDarkMode = false; // Initial mode is light
 
-    darkModeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
+darkModeToggle.addEventListener("click", () => {
+    // Toggle dark mode state
+    isDarkMode = !isDarkMode;
 
-        // Check if dark mode is active and toggle icon
-        if (document.body.classList.contains('dark-mode')) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
-    });
+    // Update the icon based on the mode
+    if (isDarkMode) {
+        darkModeIcon.textContent = "brightness_2"; // Dark mode icon
+        // Add logic to switch to dark mode styles here
+        document.body.classList.add("dark-mode");
+    } else {
+        darkModeIcon.textContent = "wb_sunny"; // Light mode icon
+        // Add logic to switch to light mode styles here
+        document.body.classList.remove("dark-mode");
+    }
+});
+
 
      const dropArea = document.getElementById('dropArea');
     const imageUpload = document.getElementById('imageUpload');
