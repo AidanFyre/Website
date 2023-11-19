@@ -38,7 +38,7 @@ body.dark-mode h1, body.dark-mode p {
 }
 
 /* If you have specific classes or IDs for your form container, add dark mode styles for them as well */
-body.dark-mode #yourFormContainerId {
+body.dark-mode #renderRequestForm {
     background-color: #242424; /* Dark background for the form container */
     color: #ffffff; /* Light text color for the form */
 }
