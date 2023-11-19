@@ -1,44 +1,41 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
     const darkModeToggle = document.getElementById("darkModeToggle");
-const darkModeIcon = document.getElementById("darkModeIcon");
-let isDarkMode = true; // Initial mode is dark (changed to true)
+    const darkModeIcon = document.getElementById("darkModeIcon");
+    let isDarkMode = true; // Initial mode is dark (changed to true)
 
-// Function to enable dark mode
-function enableDarkMode() {
-    isDarkMode = true;
-    darkModeIcon.textContent = "brightness_2"; // Dark mode icon
-    // Add logic to switch to dark mode styles here
-    document.body.classList.add("dark-mode");
-}
-
-// Function to disable dark mode
-function disableDarkMode() {
-    isDarkMode = false;
-    darkModeIcon.textContent = "wb_sunny"; // Light mode icon
-    // Add logic to switch to light mode styles here
-    document.body.classList.remove("dark-mode");
-}
-
-// Initial call to set dark mode as default
-enableDarkMode();
-
-darkModeToggle.addEventListener("click", () => {
-    // Toggle dark mode state
-    isDarkMode = !isDarkMode;
-
-    // Update the icon based on the mode
-    if (isDarkMode) {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
+    // Function to enable dark mode
+    function enableDarkMode() {
+        isDarkMode = true;
+        darkModeIcon.textContent = "brightness_2"; // Dark mode icon
+        // Add logic to switch to dark mode styles here
+        document.body.classList.add("dark-mode");
     }
-});
 
+    // Function to disable dark mode
+    function disableDarkMode() {
+        isDarkMode = false;
+        darkModeIcon.textContent = "wb_sunny"; // Light mode icon
+        // Add logic to switch to light mode styles here
+        document.body.classList.remove("dark-mode");
+    }
 
+    // Initial call to set dark mode as default
+    enableDarkMode();
 
+    darkModeToggle.addEventListener("click", () => {
+        // Toggle dark mode state
+        isDarkMode = !isDarkMode;
 
-     const dropArea = document.getElementById('dropArea');
+        // Update the icon based on the mode
+        if (isDarkMode) {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+    });
+
+    const dropArea = document.getElementById('dropArea');
     const imageUpload = document.getElementById('imageUpload');
 
     // Add click event listener to the drop area
@@ -142,4 +139,3 @@ function previewImage(file) {
 
     reader.readAsDataURL(file);
 }
-
