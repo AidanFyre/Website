@@ -1,13 +1,28 @@
-header {
-    align-content: center;
-    background-color: transparent !important;
-  }
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     height: 100vh;
+}
+
+/* New header styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent !important; /* Overriding any existing background color */
+}
+
+#header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0; /* Adjust as needed */
+}
+
+#darkModeToggle {
+    /* Existing styles for the button */
 }
 
 .content {
@@ -31,6 +46,7 @@ body.dark-mode {
     background-color: #101010;
     color: #ffffff;
 }
+
 /* Styles for the form container in dark mode */
 body.dark-mode #renderRequestForm {
     background-color: #212121 !important; /* Change this color to a lighter shade for dark mode */
@@ -137,7 +153,6 @@ body.dark-mode .drop-area {
     text-align: center;
 }
 
-
 /* Style for the submit button */
 #renderRequestForm input[type="submit"] {
     background-color: #007bff;
@@ -148,9 +163,9 @@ body.dark-mode .drop-area {
     cursor: pointer;
     width: 100%;
 }
+
 #renderRequestForm input[type="submit"]:hover {
     background-color: #0056b3;
-
 }
 
 .drop-area {
@@ -163,20 +178,4 @@ body.dark-mode .drop-area {
 }
 
 .drop-area:hover {
-    background-color: #e9e9e9;
-}
-
-/* Styles for the image preview */
-#preview img {
-    display: block;
-    margin: 20px auto; /* Center the image horizontally */
-    max-width: 200px;
-    max-height: 200px;
-}
-
-@media screen and (max-width: 480px) {
-    #renderRequestForm {
-        max-width: 95%;
-        margin: 20px auto;
-    }
-}
+    background-color: #e9e9e9
