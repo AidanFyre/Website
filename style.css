@@ -8,7 +8,8 @@ body {
 
 #header {
     display: flex;
-    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     padding: 10px;
     background-color: transparent !important; /* Overriding any existing background color */
 }
@@ -16,7 +17,7 @@ body {
 #header h1 {
     flex-grow: 1;
     text-align: center;
-    margin: 0 20px; /* Adjust as needed */
+    margin: 0; /* Adjust as needed */
 }
 
 .content {
