@@ -8,8 +8,8 @@ body {
 
 #header {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     background-color: transparent !important; /* Overriding any existing background color */
 }
