@@ -39,7 +39,7 @@ body.dark-mode h1, body.dark-mode p {
 }
 
 body.dark-mode label {
-    color: #c9c9c9; /* Soft grey for labels */
+    color: #d6d6d6; /* Soft grey for labels */
 }
 
 body.dark-mode input[type="legendName"],
