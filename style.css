@@ -28,32 +28,35 @@ body.dark-mode {
     color: #ffffff; /* Light text color for better readability */
 }
 
-body.dark-mode .content, body.dark-mode #renderRequestForm {
-    background-color: #1e1e1e; /* Dark background for the content area and form container */
-    color: #ffffff; /* Light text color for content area and form */
+body.dark-mode .content, 
+body.dark-mode #renderRequestForm { /* Replace with your form container's ID or class */
+    background-color: #2a2a2a; /* Lighter dark background for the form container */
+    color: #ffffff; /* Light text color for the form */
 }
 
 body.dark-mode h1, body.dark-mode p {
     color: #f1f1f1; /* Lighter color for headings and paragraphs */
 }
 
+/* Styles for labels in dark mode */
+body.dark-mode label {
+    color: #cccccc; /* Lighter label color for better visibility */
+}
+
 /* Styles for form elements in dark mode */
 body.dark-mode input[type="text"],
 body.dark-mode input[type="email"],
 body.dark-mode textarea {
-    background-color: #333333; /* Darker background for input fields */
+    background-color: #333333; /* Dark background for input fields */
     color: #ffffff; /* Light text color for input fields */
-    border: 1px solid #555555; /* Adjust border color for better visibility */
+    border: 1px solid #555555; /* Visible border color */
 }
 
-body.dark-mode label {
-    color: #ffffff; /* Ensure labels are also readable */
-}
-
-/* Additional styles for placeholder text in inputs and textareas */
+/* Placeholder text in dark mode */
 body.dark-mode ::placeholder {
     color: #bbbbbb; /* Lighter placeholder text for better visibility */
 }
+
 
 
 
