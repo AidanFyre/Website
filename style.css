@@ -59,6 +59,18 @@ body.dark-mode ::placeholder {
 #darkModeToggle {
     background-color: #007bff; /* Bright blue background */
     color: white;
+    font-size: 1.2em; /* Adjust icon size */
+    padding: 10px;
+    margin: 10px; /* Adds space around the button */
+    border: none;
+    border-radius: 50%; /* Ensures the button is circular */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
     /* ... other styles ... */
 }
 
