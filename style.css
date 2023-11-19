@@ -30,7 +30,7 @@ body.dark-mode {
 
 body.dark-mode .content, 
 body.dark-mode #renderRequestForm { /* Replace with your form container's ID or class */
-    background-color: #2a2a2a; /* Lighter dark background for the form container */
+    background-color: #474747; /* Lighter dark background for the form container */
     color: #ffffff; /* Light text color for the form */
 }
 
@@ -40,7 +40,7 @@ body.dark-mode h1, body.dark-mode p {
 
 /* Styles for labels in dark mode */
 body.dark-mode label {
-    color: #cccccc; /* Lighter label color for better visibility */
+    color: #c9c9c9; /* Lighter label color for better visibility */
 }
 
 /* Styles for form elements in dark mode */
