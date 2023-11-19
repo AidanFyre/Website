@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #101010; /* Dark background for the body */
+    color: #ffffff; /* Light text color for better readability */
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -23,84 +24,10 @@ p {
     color: #666;
 }
 
-body.dark-mode {
-    background-color: #101010;
-    color: #ffffff;
-}
-
-/* Styles for the form container in dark mode */
-body.dark-mode #renderRequestForm {
-    background-color: #212121 !important; /* Change this color to a lighter shade for dark mode */
-    color: #ffffff; /* White text color for the form */
-    filter: brightness(90%); /* Apply a blue tint to the background */
-}
-
-body.dark-mode .content, 
-body.dark-mode .drop-area {
-    background-color: #2d2d2d;
-    color: #ffffff;
-}
-
-body.dark-mode h1, body.dark-mode p {
-    color: #f1f1f1;
-}
-
-body.dark-mode label {
-    color: #ffffff !important; /* White label color for better visibility in dark mode */
-}
-
-body.dark-mode input[type="text"],
-body.dark-mode input[type="email"],
-body.dark-mode textarea,
-.drop-area,
-#renderRequestForm input[type="file"] {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #4e4e4e;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-body.dark-mode ::placeholder {
-    color: #bbbbbb;
-}
-
-/* Dark mode toggle button styles */
-#darkModeToggle {
-    background-color: #007bff;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-}
-
-#darkModeToggle:hover {
-    background-color: #0056b3;
-}
-
-/* Additional transition effect for form fields and labels */
-body.dark-mode input[type="text"],
-body.dark-mode input[type="email"],
-body.dark-mode textarea,
-body.dark-mode label,
-body.dark-mode .drop-area {
-    transition: background-color 0.6s, color 0.3s, border-color 0.3s;
-}
-
 /* Styles for the form container */
 #renderRequestForm {
-    background-color: #fff;
+    background-color: #2a2a2a; /* Lighter dark background for the form container */
+    color: #ffffff; /* Light text color for the form */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -109,37 +36,69 @@ body.dark-mode .drop-area {
     margin-top: 20px;
 }
 
-/* Styles for labels */
-#renderRequestForm label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
+/* Styles for labels in dark mode */
+label {
+    color: #c9c9c9; /* Lighter label color for better visibility */
 }
 
-/* Styles for all text input fields */
-#renderRequestForm input[type="text"],
-#renderRequestForm input[type="file"],
-#renderRequestForm textarea {
-    width: 100%; /* Set the width to 100% to match other elements */
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    text-align: center;
+/* Styles for form elements in dark mode */
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: #333333; /* Dark background for input fields */
+    color: #ffffff; /* Light text color for input fields */
+    border: 1px solid #4e4e4e; /* Visible border color */
 }
 
-/* Style for the submit button */
-#renderRequestForm input[type="submit"] {
-    background-color: #007bff;
+/* Placeholder text in dark mode */
+::placeholder {
+    color: #bbbbbb; /* Lighter placeholder text for better visibility */
+}
+
+/* Dark mode toggle button styles */
+#darkModeToggle {
+    font-size: 1.2em; /* Adjust icon size */
+    padding: 10px;
+    margin: 10px; /* Adds space around the button */
+    background-color: #007bff; /* Discord-like blue theme */
     color: white;
-    padding: 15px 15px; /* Increased height for the submit button */
+    border: none;
+    border-radius: 50%; /* Makes it circular */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+}
+
+#darkModeToggle:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styles for the submit button */
+input[type="submit"] {
+    background-color: #007bff; /* Discord-like blue theme */
+    color: white;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+}
+
+.drop-area {
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+.drop-area:hover {
+    background-color: #e9e9e9;
 }
 
 /* Styles for the image preview */
@@ -153,6 +112,6 @@ body.dark-mode .drop-area {
 @media screen and (max-width: 480px) {
     #renderRequestForm {
         max-width: 95%;
-        margin: 20px auto;
+        margin: 20px auto; /* Center the form with automatic horizontal margins */
     }
 }
