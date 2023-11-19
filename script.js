@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.getElementById('renderRequestForm');
+    const imageUpload = document.getElementById('imageUpload');
+    const dropArea = document.getElementById('dropArea'); // Ensure you have this element in your HTML
+
     form.addEventListener('submit', function (e) {
         e.preventDefault(); // Prevents the default form submission action
 
@@ -13,50 +16,76 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Legend Skin:', legendSkin);
         console.log('Legend Pose:', legendPose);
     });
-});
 
-    // Function to handle file selection or drop
-    function handleFiles(files) {
-        for (let i = 0, len = files.length; i < len; i++) {
-            if (validateImage(files[i])) {
-                previewImage(files[i]);
-            } else {
-                alert('Please upload an image file.');
-            }
-        }
-    }
-
-    // Validate if the file is an image
-    function validateImage(file) {
-        return file.type.match('image.*');
-    }
-
-    // Function to preview the image
-    function previewImage(file) {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onloadend = function () {
-            const img = document.createElement('img');
-            img.src = reader.result;
-            img.style.maxWidth = '200px'; // Set a maximum width for the preview
-            img.style.maxHeight = '200px'; // Set a maximum height for the preview
-            document.getElementById('preview').innerHTML = '';
-            document.getElementById('preview').appendChild(img);
-        };
-    }
-
-    // Handle files from file input
     imageUpload.addEventListener('change', function (e) {
         handleFiles(this.files);
     });
 
-    // Handle dropped files
-    function handleDrop(e) {
-        let dt = e.dataTransfer;
-        let files = dt.files;
-        handleFiles(files);
-    }
+    // Setup drag and drop listeners
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
 
-    // ... rest of the existing code ...
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+
+    dropArea.addEventListener('drop', handleDrop, false);
 });
 
+// Prevent default drag behaviors
+function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+// Highlight drop area when item is dragged over it
+function highlight(e) {
+    document.getElementById('dropArea').classList.add('highlight');
+}
+
+// Unhighlight drop area
+function unhighlight(e) {
+    document.getElementById('dropArea').classList.remove('highlight');
+}
+
+// Handle dropped files
+function handleDrop(e) {
+    let dt = e.dataTransfer;
+    let files = dt.files;
+    handleFiles(files);
+}
+
+// Function to handle file selection or drop
+function handleFiles(files) {
+    for (let i = 0, len = files.length; i < len; i++) {
+        if (validateImage(files[i])) {
+            previewImage(files[i]);
+        } else {
+            alert('Please upload an image file.');
+        }
+    }
+}
+
+// Validate if the file is an image
+function validateImage(file) {
+    return file.type.match('image.*');
+}
+
+// Function to preview the image
+function previewImage(file) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = function () {
+        const img = document.createElement('img');
+        img.src = reader.result;
+        img.style.maxWidth = '200px'; // Set a maximum width for the preview
+        img.style.maxHeight = '200px'; // Set a maximum height for the preview
+        document.getElementById('preview').innerHTML = '';
+        document.getElementById('preview').appendChild(img);
+    };
+}
