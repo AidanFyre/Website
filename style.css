@@ -113,8 +113,10 @@ body.dark-mode .drop-area {
 }
 
 /* Styles for all text input fields */
-#renderRequestForm input[type="text"] {
-    width: calc(100% - 20px);
+#renderRequestForm input[type="text"],
+#renderRequestForm input[type="file"],
+#renderRequestForm textarea {
+    width: 100%; /* Set the width to 100% to match other elements */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -122,6 +124,7 @@ body.dark-mode .drop-area {
     box-sizing: border-box;
     text-align: center;
 }
+
 
 /* Style for the submit button */
 #renderRequestForm input[type="submit"] {
