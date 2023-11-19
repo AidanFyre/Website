@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    // ... existing code ...
-
     // Function to handle file selection or drop
     function handleFiles(files) {
         for (let i = 0, len = files.length; i < len; i++) {
