@@ -1,5 +1,5 @@
 header {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 body {
     font-family: Arial, sans-serif;
