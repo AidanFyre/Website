@@ -14,7 +14,7 @@ darkModeToggle.addEventListener("click", () => {
         // Add logic to switch to dark mode styles here
         document.body.classList.add("dark-mode");
     } else {
-        darkModeIcon.textContent = "bightrness_2"; // Light mode icon
+        darkModeIcon.textContent = "brightness_2"; // Light mode icon
         // Add logic to switch to light mode styles here
         document.body.classList.remove("dark-mode");
     }
