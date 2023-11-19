@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const darkModeToggle = document.getElementById("darkModeToggle");
 const darkModeIcon = document.getElementById("darkModeIcon");
-let isDarkMode = false; // Initial mode is light
+let isDarkMode = true; // Initial mode is light
 
 darkModeToggle.addEventListener("click", () => {
     // Toggle dark mode state
