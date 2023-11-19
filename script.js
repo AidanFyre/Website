@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
     const darkModeToggle = document.getElementById('darkModeToggle');
+    const icon = darkModeToggle.querySelector('i'); // Get the icon inside the button
 
     darkModeToggle.addEventListener('click', function () {
         document.body.classList.toggle('dark-mode');
+
+        // Check if dark mode is active and toggle icon
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
     });
-    
+
      const dropArea = document.getElementById('dropArea');
     const imageUpload = document.getElementById('imageUpload');
 
