@@ -24,13 +24,13 @@ p {
 }
 
 body.dark-mode {
-    background-color: #121212; /* Dark grey for the body background */
+    background-color: #101010; /* Dark grey for the body background */
     color: #ffffff; /* White for better readability */
 }
 
 body.dark-mode .content, 
 body.dark-mode #renderRequestForm { /* Adjust for your form container */
-    background-color: #2a2a2a; /* Slightly lighter grey for the content and form container */
+    background-color: #2d2d2d; /* Slightly lighter grey for the content and form container */
     color: #ffffff; /* White text for the form */
 }
 
@@ -42,8 +42,9 @@ body.dark-mode label {
     color: #c9c9c9; /* Soft grey for labels */
 }
 
-body.dark-mode input[type="text"],
-body.dark-mode input[type="email"],
+body.dark-mode input[type="legendName"],
+body.dark-mode input[type="legendSkin"],
+body.dark-mode input[type="legendPose"],
 body.dark-mode textarea {
     background-color: #333333; /* Darker grey for input fields */
     color: #ffffff; /* White text for input fields */
