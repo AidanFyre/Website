@@ -1,39 +1,50 @@
-/* Default styles (light mode) */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 50;
-    padding: 50;
+    margin: 0;
+    padding: 0;
     height: 100vh;
-    color: #333;
 }
 
-/* Dark mode styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+}
+
 body.dark-mode {
     background-color: #101010;
     color: #ffffff;
 }
-
 /* Styles for the form container in dark mode */
 body.dark-mode #renderRequestForm {
-    background-color: #212121;
-    color: #ffffff;
+    background-color: #212121 !important; /* Change this color to a lighter shade for dark mode */
+    color: #ffffff; /* White text color for the form */
 }
 
-/* Additional elements and styles for dark mode */
-body.dark-mode .content,
+body.dark-mode .content, 
 body.dark-mode .drop-area {
     background-color: #2d2d2d;
     color: #ffffff;
 }
 
-body.dark-mode h1,
-body.dark-mode p {
+body.dark-mode h1, body.dark-mode p {
     color: #f1f1f1;
 }
 
 body.dark-mode label {
-    color: #ffffff !important;
+    color: #ffffff !important; /* White label color for better visibility in dark mode */
 }
 
 body.dark-mode input[type="text"],
@@ -113,7 +124,7 @@ body.dark-mode .drop-area {
 #renderRequestForm input[type="text"],
 #renderRequestForm input[type="file"],
 #renderRequestForm textarea {
-    width: 100%;
+    width: 100%; /* Set the width to 100% to match other elements */
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -121,6 +132,7 @@ body.dark-mode .drop-area {
     box-sizing: border-box;
     text-align: center;
 }
+
 
 /* Style for the submit button */
 #renderRequestForm input[type="submit"] {
@@ -133,10 +145,23 @@ body.dark-mode .drop-area {
     width: 100%;
 }
 
+.drop-area {
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+.drop-area:hover {
+    background-color: #e9e9e9;
+}
+
 /* Styles for the image preview */
 #preview img {
     display: block;
-    margin: 20px auto;
+    margin: 20px auto; /* Center the image horizontally */
     max-width: 200px;
     max-height: 200px;
 }
@@ -146,18 +171,4 @@ body.dark-mode .drop-area {
         max-width: 95%;
         margin: 20px auto;
     }
-}
-
-/* CSS to make the header bar invisible in light mode */
-#header {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* CSS to make the header bar invisible in dark mode */
-body.dark-mode #header {
-    background-color: #101010 !important;
-    border: none !important;
-    box-shadow: none !important;
 }
