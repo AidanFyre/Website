@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    
-/* CSS to set dark mode as default */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #101010; /* Dark background color */
-    color: #ffffff; /* White text color */
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
 
     const darkModeToggle = document.getElementById("darkModeToggle");
 const darkModeIcon = document.getElementById("darkModeIcon");
