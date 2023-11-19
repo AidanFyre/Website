@@ -27,9 +27,13 @@ body.dark-mode {
     background-color: #101010;
     color: #ffffff;
 }
+/* Styles for the form container in dark mode */
+body.dark-mode #renderRequestForm {
+    background-color: #2d2d2d; /* Change this color to a lighter shade for dark mode */
+    color: #ffffff; /* White text color for the form */
+}
 
 body.dark-mode .content, 
-body.dark-mode #renderRequestForm,
 body.dark-mode .drop-area {
     background-color: #2d2d2d;
     color: #ffffff;
