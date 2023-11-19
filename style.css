@@ -24,14 +24,35 @@ p {
 }
 
 body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
+    background-color: #121212; /* Dark background for the body */
+    color: #ffffff; /* Light text color for better readability */
 }
 
 body.dark-mode .content {
-    background-color: #1e1e1e; /* Slightly lighter background for content areas */
-    /* Add other dark mode specific styles here */
+    background-color: #1e1e1e; /* Dark background for the content area */
+    color: #ffffff; /* Light text color for content area */
 }
+
+body.dark-mode h1, body.dark-mode p {
+    color: #f1f1f1; /* Lighter color for headings and paragraphs */
+}
+
+/* If you have specific classes or IDs for your form container, add dark mode styles for them as well */
+body.dark-mode #yourFormContainerId {
+    background-color: #242424; /* Dark background for the form container */
+    color: #ffffff; /* Light text color for the form */
+}
+
+/* Additional styles for inputs and labels in dark mode */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea,
+body.dark-mode label {
+    background-color: #333333; /* Darker background for input fields */
+    color: #ffffff; /* Light text color for input fields */
+    border-color: #444444; /* Darker border for input fields */
+}
+
 
 #darkModeToggle {
     font-size: 1.2em; /* Adjust icon size */
