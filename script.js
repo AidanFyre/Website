@@ -14,47 +14,52 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Legend Pose:', legendPose);
     });
 });
+
 document.addEventListener('DOMContentLoaded', (event) => {
-    const dropArea = document.getElementById('dropArea');
-    const imageUpload = document.getElementById('imageUpload');
+    // ... existing code ...
 
-    // Open file dialog when clicking on the drop area
-    dropArea.addEventListener('click', () => imageUpload.click());
-
-    // Prevent default drag behaviors
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, preventDefaults, false);
-    });
-
-    function preventDefaults(e) {
-        e.preventDefault();
-        e.stopPropagation();
+    // Function to handle file selection or drop
+    function handleFiles(files) {
+        for (let i = 0, len = files.length; i < len; i++) {
+            if (validateImage(files[i])) {
+                previewImage(files[i]);
+            } else {
+                alert('Please upload an image file.');
+            }
+        }
     }
 
-    // Highlight drop area when item is dragged over it
-    ['dragenter', 'dragover'].forEach(eventName => {
-        dropArea.addEventListener(eventName, highlight, false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, unhighlight, false);
-    });
-
-    function highlight(e) {
-        dropArea.classList.add('highlight');
+    // Validate if the file is an image
+    function validateImage(file) {
+        return file.type.match('image.*');
     }
 
-    function unhighlight(e) {
-        dropArea.classList.remove('highlight');
+    // Function to preview the image
+    function previewImage(file) {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = function () {
+            const img = document.createElement('img');
+            img.src = reader.result;
+            img.style.maxWidth = '200px'; // Set a maximum width for the preview
+            img.style.maxHeight = '200px'; // Set a maximum height for the preview
+            document.getElementById('preview').innerHTML = '';
+            document.getElementById('preview').appendChild(img);
+        };
     }
+
+    // Handle files from file input
+    imageUpload.addEventListener('change', function (e) {
+        handleFiles(this.files);
+    });
 
     // Handle dropped files
-    dropArea.addEventListener('drop', handleDrop, false);
-
     function handleDrop(e) {
         let dt = e.dataTransfer;
         let files = dt.files;
-
-        // Handle files here (e.g., display preview, add to form data, etc.)
+        handleFiles(files);
     }
+
+    // ... rest of the existing code ...
 });
+
