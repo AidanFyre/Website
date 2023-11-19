@@ -71,7 +71,7 @@ body.dark-mode #darkModeIcon {
 
 /* CSS to make the header bar invisible */
 #header {
-    background-color: transparent;
+    background-color: transparent !important;
     border: none; /* Remove any borders if present */
     box-shadow: none; /* Remove any box shadow if present */
 }
