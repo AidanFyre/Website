@@ -40,7 +40,7 @@ body.dark-mode h1, body.dark-mode p {
 }
 
 body.dark-mode label {
-    color: #ffffff;
+    color: #ffffff; /* White label color for better visibility in dark mode */
 }
 
 body.dark-mode input[type="text"],
