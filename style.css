@@ -207,7 +207,7 @@ body.dark-mode .drop-area:hover {
     max-height: 200px;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
 #renderRequestForm {
     max-width: 80%; /* Reduce the width on smaller screens */
     #header {
