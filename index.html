@@ -28,7 +28,21 @@
 </head>
 <body>
     <!-- Header Section -->
-    
+    <header id="header">
+        <h1>Apex Legends Renders</h1>
+        <nav id="nav">
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="../html/about.html" class="nav-item">About</a>
+            <a href="../html/requests.html" class="nav-item">Requests</a>
+
+            <!-- Add more nav items as needed -->
+        </nav>
+        <button id="discord-login">Login with Discord</button>
+
+        <button id="darkModeToggle">
+            <i class="material-icons" id="darkModeIcon">wb_sunny</i>
+        </button>
+    </header>
 
     <!-- Main Content Section -->
     <landing id="landing">
@@ -64,6 +78,7 @@
 
     <!-- JavaScript -->
     <script src="../js/script.js"></script>
+
     <!-- smooth scroll JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -79,39 +94,5 @@
             });
         });
     </script>
-
-<script>
-    function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    window.onload = function() {
-        if (!getCookie('animationPlayed')) {
-            document.getElementById('landing').classList.add('animate');
-            setCookie('animationPlayed', 'true', 1); // Expires in 1 day
-        }
-    };
-</script>
-
-    
-    
-
 </body>
 </html>
