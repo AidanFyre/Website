@@ -9,7 +9,7 @@ body {
 }
 
 #header {
-    position: fixed; /* Fixed position to keep it at the top */
+    position: sticky; /* Fixed position to keep it at the top */
     top: 0; /* Position at the top of the viewport */
     z-index: 100; /* Higher z-index to ensure it's on top */
     display: flex;
