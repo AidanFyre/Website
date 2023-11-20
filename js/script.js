@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     
     document.getElementById('discord-login').addEventListener('click', async () => {
+        console.log('got here')
         const { user, session, error } = await supabase.auth.signIn({
             provider: 'discord'
         });
