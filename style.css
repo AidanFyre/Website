@@ -208,6 +208,6 @@ body.dark-mode .drop-area:hover {
         max-width: 90%; /* Reduce the width on smaller screens */
         padding: 10px;
         margin: 10px;
-        text-size-adjust:90%;
+        text-size-adjust:90% !important;
     }
 }
