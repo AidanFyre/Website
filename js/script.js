@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
     
+    const session = supabase.auth.session();
+
+if (session) {
+    console.log('User is logged in:', session.user);
+} else {
+    console.log('User is not logged in.');
+}
+
 
     const darkModeToggle = document.getElementById("darkModeToggle");
     const darkModeIcon = document.getElementById("darkModeIcon");
