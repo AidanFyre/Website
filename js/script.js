@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    const supabaseUrl = 'https://nzyovcfdebtdnqggzcyd.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56eW92Y2ZkZWJ0ZG5xZ2d6Y3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0NDA2MzEsImV4cCI6MjAxNjAxNjYzMX0.MLkopaa5jk0rgk5iy-RPWV6qwlvJSlbpqUfPFsxa2eI';
-
+    const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+    const supabaseAnonKey = process.env.REACT_APP_SUPABASE_API;
+    
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
     
