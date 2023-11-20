@@ -206,7 +206,5 @@ body.dark-mode .drop-area:hover {
 @media screen and (max-width: 600px) {
     #renderRequestForm {
         max-width: 80%; /* Reduce the width on smaller screens */
-        padding: 10px;
-        margin: 10px;
     }
 }
