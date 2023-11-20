@@ -21,13 +21,25 @@
 
 #discord-login {
     display: flex;
-    padding: 20px 40px;
+    padding: 10px;
+    border: none;
+    align-items: center;
     background-color: #007acc; /* Your button color */
     color: white;
     text-align: center;
+    text-transform:uppercase;
     text-decoration: none;
     transition: background-color 0.3s;
-    border-radius: 40px;
+    border-radius: 50px;
+    width: 180px;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    margin-right: 30px;
+}
+#discord-login:hover {
+    background-color: #0056b3;
 }
 
 #nav {
@@ -35,7 +47,7 @@
 }
 #nav .nav-item {
     text-decoration: none; /* Removes underline from links */
-    color: #f4f4f4; /* Sets the text color */
+    color: #2d2d30; /* Sets the text color */
     margin-right: 40px; /* Adds space between items */
     font-size: 1em; /* Sets the font size */
     align-items:center;

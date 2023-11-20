@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     
+    document.getElementById('discord-login').addEventListener('click', async () => {
+        const { user, session, error } = await supabase.auth.signIn({
+            provider: 'discord'
+        });
+    
+        if (error) console.error('Error logging in:', error);
+        else console.log('Success! User:', user);
+    });
+    
     window.addEventListener('scroll', () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             // User is at the bottom of the page
@@ -17,7 +26,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         isDarkMode = true;
         darkModeIcon.textContent = "brightness_2"; // Dark mode icon
         // Add logic to switch to dark mode styles here
-        document.body.classList.add("dark-mode");
+        document.body.classList.remove("dark-mode");
     }
 
     // Function to disable dark mode
@@ -25,7 +34,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         isDarkMode = false;
         darkModeIcon.textContent = "wb_sunny"; // Light mode icon
         // Add logic to switch to light mode styles here
-        document.body.classList.remove("dark-mode");
+        document.body.classList.add("dark-mode");
     }
 
     // Initial call to set dark mode as default

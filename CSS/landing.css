@@ -1,9 +1,8 @@
 #landing {
     min-height: 100vh;
-    background: url('images/Gilded_Radiance1.png') no-repeat 120% center;
+    background: url('images/Gilded_Radiance1.png') no-repeat 110% center;
     background-size: contain;
     background-color: #e5e5e5;
-    border-top: 50px solid transparent;
     padding: 0;
 }
 
