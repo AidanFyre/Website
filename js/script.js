@@ -1,5 +1,5 @@
 // In another file
-import supabase from '../lib/supabase';
+import supabase from 'lib/supabase';
 
 // Use the supabase client
 
