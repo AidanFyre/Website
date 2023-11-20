@@ -35,7 +35,7 @@
 }
 #nav .nav-item {
     text-decoration: none; /* Removes underline from links */
-    color: #1e1e1e; /* Sets the text color */
+    color: #f4f4f4; /* Sets the text color */
     margin-right: 40px; /* Adds space between items */
     font-size: 1em; /* Sets the font size */
     align-items:center;
