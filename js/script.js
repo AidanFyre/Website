@@ -1,38 +1,38 @@
 import { createClient } from '@supabase/supabase-js';
-document.addEventListener('DOMContentLoaded', (event) => {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    
-    const supabase = createClient(supabaseUrl, supabaseAnonKey);
-    
-    // Now you can use the `supabase` object to interact with your Supabase database
-    
 
-    
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Now you can use the `supabase` object to interact with your Supabase database
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
     document.getElementById('discord-login').addEventListener('click', async () => {
-        console.log('got here')
+        console.log('got here');
         const { user, session, error } = await supabase.auth.signIn({
             provider: 'discord'
         });
-    
+
         if (error) console.error('Error logging in:', error);
         else console.log('Success! User:', user);
     });
-    
+
     window.addEventListener('scroll', () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             // User is at the bottom of the page
             // Load more content here or reveal hidden content
         }
     });
-    
+
     const session = supabase.auth.session();
 
-if (session) {
-    console.log('User is logged in:', session.user);
-} else {
-    console.log('User is not logged in.');
-}
+    if (session) {
+        console.log('User is logged in:', session.user);
+    } else {
+        console.log('User is not logged in.');
+    }
 
 
     const darkModeToggle = document.getElementById("darkModeToggle");
@@ -175,7 +175,7 @@ function previewImage(file) {
     reader.readAsDataURL(file);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('renderRequestForm'); // Replace with your form ID
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -202,4 +202,3 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('message').innerText = 'Your request has been submitted!';
     });
 });
-    
