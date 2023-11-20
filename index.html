@@ -22,13 +22,13 @@
         <!-- Render Request Form -->
         <form id="renderRequestForm">
             <label for="legendName">Legend</label>
-            <input type="text" id="legendName" name="legendName" placeholder="Example: Wraith" required><br><br>
+            <input type="text" id="legendName" name="legendName" placeholder="Example: Wraith" maxlength="50" required><br><br>
     
             <label for="legendSkin">Skin</label>
-            <input type="text" id="legendSkin" name="legendSkin" placeholder="Example: Perfect Soldier" required><br><br>
+            <input type="text" id="legendSkin" name="legendSkin" placeholder="Example: Perfect Soldier" maxlength="50" required><br><br>
     
             <label for="legendPose">Pose</label>
-            <input type="text" id="legendPose" name="legendPose" placeholder="Example: Channelled Energy (Please select an in-game pose)" required><br><br>
+            <input type="text" id="legendPose" name="legendPose" placeholder="Example: Channelled Energy" maxlength="50" required><br><br>
     
             <div id="dropArea" class="drop-area">
                 <p>Drag and drop or click to select an image if you're unsure of a pose or skin name.</p>
@@ -38,6 +38,7 @@
     
             <input type="submit" value="Submit Request">
         </form>
+        <div id="message"></div>
     </div>
 
     <!-- JavaScript -->

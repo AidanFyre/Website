@@ -9,10 +9,14 @@ body {
 }
 
 #header {
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0; /* Position at the top of the viewport */
+    z-index: 100; /* Higher z-index to ensure it's on top */
     display: flex;
     justify-content:right;
     align-items:center;
     padding: 10px;
+    width:100%;
 }
 
 #header h1 {
@@ -41,18 +45,21 @@ p {
 }
 
 body.dark-mode #header {
-    background-color: #2c2f33;
+    background-color: #252526;
     color: #ffffff;
 }
 /* Styles for the form container in dark mode */
 body.dark-mode #renderRequestForm {
-    background-color: #212121 !important; /* Change this color to a lighter shade for dark mode */
+    background-color: #2d2d30 !important; /* Change this color to a lighter shade for dark mode */
     color: #ffffff; /* White text color for the form */
 }
 
-body.dark-mode .content, 
+body.dark-mode .content {
+    background-color: #1e1e1e; /* Background color */
+    color: #ffffff;
+}
 body.dark-mode .drop-area {
-    background-color: #2d2d2d;
+    background-color: #252526;
     color: #ffffff;
 }
 
@@ -69,13 +76,13 @@ body.dark-mode input[type="email"],
 body.dark-mode textarea,
 .drop-area,
 #renderRequestForm input[type="file"] {
-    background-color: #333333;
+    background-color: #252526;
     color: #ffffff;
     border: 1px solid #4e4e4e;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     box-sizing: border-box;
-    text-align: center;
+    text-align:left;
 }
 
 body.dark-mode ::placeholder {
@@ -88,7 +95,7 @@ body.dark-mode #darkModeIcon {
 
 /* Dark mode toggle button styles */
 #darkModeToggle {
-    background-color: #007bff;
+    background-color: #007acc;
     color: white;
     font-size: 1.2em;
     padding: 10px;
@@ -102,6 +109,7 @@ body.dark-mode #darkModeIcon {
     align-items: center;
     width: 40px;
     height: 40px;
+    margin-right: 30px;
 }
 
 #darkModeToggle:hover {
@@ -132,10 +140,10 @@ body.dark-mode .drop-area {
 /* Styles for labels */
 #renderRequestForm label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: #333;
-    text-align: center;
+    text-align: left;
 }
 
 /* Styles for all text input fields */
@@ -148,19 +156,21 @@ body.dark-mode .drop-area {
     border-radius: 4px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
+    font-size: small;
 }
 
 
 /* Style for the submit button */
 #renderRequestForm input[type="submit"] {
-    background-color: #007bff;
+    background-color: #007acc;
     color: white;
     padding: 15px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    font-size: small;
 }
 #renderRequestForm input[type="submit"]:hover {
     background-color: #0056b3;
@@ -193,7 +203,6 @@ body.dark-mode .drop-area:hover {
 
 @media screen and (max-width: 480px) {
     #renderRequestForm {
-        max-width: 95%;
-        margin-top: 10px;
+        max-width: 90%; /* Reduce the width on smaller screens */
     }
 }

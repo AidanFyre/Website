@@ -164,5 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Submission error:', error);
             // Handle error (e.g., show an error message)
         }
+        document.getElementById('message').innerText = 'Your request has been submitted!';
     });
 });
