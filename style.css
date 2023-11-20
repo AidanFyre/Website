@@ -214,5 +214,7 @@ body.dark-mode .drop-area:hover {
 
     #header h1 {
         font-size: 1.5em; /* Smaller font size for mobile */
+    h1 
+        font-size: 1.5em; /* Smaller font size for mobile */
     }
 }
