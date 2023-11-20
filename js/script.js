@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-    const supabaseAnonKey = process.env.REACT_APP_SUPABASE_API;
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
     
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
