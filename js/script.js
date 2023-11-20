@@ -1,11 +1,7 @@
-import { createClient } from '@supabase/supabase-js';
+// In another file
+import supabase from '../lib/supabase';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-// Now you can use the `supabase` object to interact with your Supabase database
+// Use the supabase client
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
