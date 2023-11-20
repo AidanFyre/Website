@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) =>
 // In another file
 import supabase from 'lib/supabase';
 
@@ -31,6 +30,7 @@ import supabase from 'lib/supabase';
         console.log('User is not logged in.');
     }
 
+    document.addEventListener('DOMContentLoaded', (event) => {
 
     const darkModeToggle = document.getElementById("darkModeToggle");
     const darkModeIcon = document.getElementById("darkModeIcon");
