@@ -1,5 +1,5 @@
-// pages/index.js
-import supabase from '../lib/supabaseClient';
+import supabase from "./lib/supabaseClient";
+
 
 export default function Home() {
   // You can use the supabase client here
