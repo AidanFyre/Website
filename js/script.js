@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
+    import { createClient } from '@supabase/supabase-js';
+
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
     
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    
+    // Now you can use the `supabase` object to interact with your Supabase database
+    
 
     
     document.getElementById('discord-login').addEventListener('click', async () => {
