@@ -8,20 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
     <!-- Base Styles -->
-    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="../CSS/base.css">
     <!-- Header Styles -->
-    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="../CSS/header.css">
     <!-- Landing Page Styles -->
-    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="stylesheet" href="../CSS/landing.css">
     <!-- Content Styles -->
-    <link rel="stylesheet" href="CSS/content.css">
+    <link rel="stylesheet" href="../CSS/content.css">
     <!-- Dark Mode Styles -->
-    <link rel="stylesheet" href="CSS/dark-mode.css">
+    <link rel="stylesheet" href="../CSS/dark-mode.css">
     <!-- Request Form Styles -->
-    <link rel="stylesheet" href="CSS/request-form.css">
+    <link rel="stylesheet" href="../CSS/request-form.css">
     <!-- Responsive Styles -->
-    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
 
     <title>Apex Legends Renders</title>
 </head>
@@ -29,16 +30,25 @@
     <!-- Header Section -->
     <header id="header">
         <h1>Apex Legends Renders</h1>
+        <nav id="nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="requests.html" class="nav-item">Requests</a>
+            <a href="login.html" class="nav-item">Login</a>
+
+            <!-- Add more nav items as needed -->
+        </nav>
         <button id="darkModeToggle">
             <i class="material-icons" id="darkModeIcon">wb_sunny</i>
-        </button>        
-    </header>    
+        </button>
+    </header>
+    
 
     <!-- Main Content Section -->
     <landing id="landing">
         <!-- Your landing content goes here -->
         <h1>Welcome.</h1>
-        <a href="#renderRequestForm" class="scroll-button">Go to Content</a>
+        <a href="#renderRequestForm" class="scroll-button">Request a render!</a>
     </landing>
     <div class="content">
         <h1>Welcome to Apex Legends Renders.</h1>
@@ -67,6 +77,55 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
+    <!-- smooth scroll JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('.scroll-button').on('click', function(event) {
+                event.preventDefault();
+                var target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 1000, 'easeInCubic'); // Using 'easeInOutCubic' for a gradual easing effect
+            });
+        });
+    </script>
+
+<script>
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    window.onload = function() {
+        if (!getCookie('animationPlayed')) {
+            document.getElementById('landing').classList.add('animate');
+            setCookie('animationPlayed', 'true', 1); // Expires in 1 day
+        }
+    };
+</script>
+
+    
+    
+
 </body>
 </html>
