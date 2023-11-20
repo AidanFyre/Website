@@ -1,4 +1,4 @@
-import supabase from "./js/lib/supabaseClient";
+import supabase from "./lib/supabaseClient";
 
 
 export default function Home() {
