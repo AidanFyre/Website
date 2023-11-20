@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            // User is at the bottom of the page
+            // Load more content here or reveal hidden content
+        }
+    });
+    
 
     const darkModeToggle = document.getElementById("darkModeToggle");
     const darkModeIcon = document.getElementById("darkModeIcon");

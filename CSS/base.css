@@ -1,0 +1,22 @@
+body {
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #333;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    color: #666;
+}

@@ -1,0 +1,86 @@
+body.dark-mode #header {
+    background-color: #2d2d30;
+    color: #ffffff;
+}
+
+body.dark-mode #renderRequestForm {
+    background-color: #2d2d30 !important;
+    color: #ffffff;
+}
+
+body.dark-mode .content {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode #landing {
+    background-color: #2d2d30;
+    color: #ffffff;
+}
+
+body.dark-mode .drop-area {
+    background-color: #252526;
+    color: #ffffff;
+}
+
+body.dark-mode h1, body.dark-mode p {
+    color: #f1f1f1;
+}
+
+body.dark-mode label {
+    color: #ffffff !important;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea,
+.drop-area,
+#renderRequestForm input[type="file"] {
+    background-color: #252526;
+    color: #ffffff;
+    border: 1px solid #4e4e4e;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+body.dark-mode ::placeholder {
+    color: #bbbbbb;
+}
+
+body.dark-mode #darkModeIcon {
+    transform: scaleX(-1) rotate(30deg);
+}
+
+#darkModeToggle {
+    background-color: #007acc;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 0px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 60px;
+    z-index: 2;
+}
+
+#darkModeToggle:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea,
+body.dark-mode label,
+body.dark-mode .drop-area {
+    transition: background-color 0.6s, color 0.3s, border-color 0.3s;
+}
