@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Initial call to set dark mode as default
-    enableDarkMode();
+    enableDarkMode(false);
 
     darkModeToggle.addEventListener("click", () => {
         // Toggle dark mode state
@@ -175,3 +175,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('message').innerText = 'Your request has been submitted!';
     });
 });
+    

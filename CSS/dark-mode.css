@@ -52,6 +52,9 @@ body.dark-mode ::placeholder {
 body.dark-mode #darkModeIcon {
     transform: scaleX(-1) rotate(30deg);
 }
+body.dark-mode .nav {
+    color: #ffffff;
+}
 
 #darkModeToggle:hover {
     background-color: #0056b3;

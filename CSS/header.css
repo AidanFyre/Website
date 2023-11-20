@@ -12,7 +12,6 @@
 }
 
 #header h1 {
-    z-index: 1;
     margin: 0; /* Resets default margin */
     padding: 0; /* Resets default padding */
     font-size: 2em;
@@ -20,12 +19,23 @@
     margin-right: auto;
 }
 
+#discord-login {
+    display: flex;
+    padding: 20px 40px;
+    background-color: #007acc; /* Your button color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 40px;
+}
+
 #nav {
     display: flex;
 }
 #nav .nav-item {
     text-decoration: none; /* Removes underline from links */
-    color: #f4f4f4; /* Sets the text color */
+    color: #1e1e1e; /* Sets the text color */
     margin-right: 40px; /* Adds space between items */
     font-size: 1em; /* Sets the font size */
     align-items:center;
@@ -49,5 +59,4 @@
     height: 40px;
     position: relative; /* Change from absolute to relative */
     margin-right: 60px; /* Match the left margin of the h1 */
-    z-index: 2;
 }
