@@ -1,9 +1,10 @@
+document.addEventListener('DOMContentLoaded', (event) =>
 // In another file
 import supabase from 'lib/supabase';
 
 // Use the supabase client
 
-document.addEventListener('DOMContentLoaded', (event) => {
+
 
     document.getElementById('discord-login').addEventListener('click', async () => {
         console.log('got here');
