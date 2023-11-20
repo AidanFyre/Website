@@ -1,21 +1,3 @@
-import supabase from "./lib/supabaseClient.js";
-
-
-export default function Home() {
-  // You can use the supabase client here
-}
-async function signInWithDiscord() {
-    const { user, session, error } = await supabase.auth.signIn({
-      provider: 'discord',
-    });
-  
-    if (error) {
-      console.error('Error logging in:', error);
-    } else {
-      console.log('Success! User:', user);
-    }
-  }
-  
 document.addEventListener('DOMContentLoaded', (event) => {
 
     const dropArea = document.getElementById('dropArea');
