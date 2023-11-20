@@ -69,9 +69,11 @@ body.dark-mode #darkModeIcon {
     width: 40px;
     height: 40px;
     position: absolute;
-    right: 60px;
+    right: 60px; /* Match the left margin of the h1 */
+    top: 40px; /* Match the top margin of the h1 */
     z-index: 2;
 }
+
 
 #darkModeToggle:hover {
     background-color: #0056b3;
