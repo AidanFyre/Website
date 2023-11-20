@@ -1,71 +1,22 @@
-// In another file
-import supabase from 'lib/supabase';
+// pages/index.js
+import supabase from '../lib/supabaseClient';
 
-// Use the supabase client
-
-
-
-    document.getElementById('discord-login').addEventListener('click', async () => {
-        console.log('got here');
-        const { user, session, error } = await supabase.auth.signIn({
-            provider: 'discord'
-        });
-
-        if (error) console.error('Error logging in:', error);
-        else console.log('Success! User:', user);
+export default function Home() {
+  // You can use the supabase client here
+}
+async function signInWithDiscord() {
+    const { user, session, error } = await supabase.auth.signIn({
+      provider: 'discord',
     });
-
-    window.addEventListener('scroll', () => {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            // User is at the bottom of the page
-            // Load more content here or reveal hidden content
-        }
-    });
-
-    const session = supabase.auth.session();
-
-    if (session) {
-        console.log('User is logged in:', session.user);
+  
+    if (error) {
+      console.error('Error logging in:', error);
     } else {
-        console.log('User is not logged in.');
+      console.log('Success! User:', user);
     }
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const darkModeIcon = document.getElementById("darkModeIcon");
-    let isDarkMode = true; // Initial mode is dark (changed to true)
-
-    // Function to enable dark mode
-    function enableDarkMode() {
-        isDarkMode = true;
-        darkModeIcon.textContent = "brightness_2"; // Dark mode icon
-        // Add logic to switch to dark mode styles here
-        document.body.classList.remove("dark-mode");
-    }
-
-    // Function to disable dark mode
-    function disableDarkMode() {
-        isDarkMode = false;
-        darkModeIcon.textContent = "wb_sunny"; // Light mode icon
-        // Add logic to switch to light mode styles here
-        document.body.classList.add("dark-mode");
-    }
-
-    // Initial call to set dark mode as default
-    enableDarkMode(false);
-
-    darkModeToggle.addEventListener("click", () => {
-        // Toggle dark mode state
-        isDarkMode = !isDarkMode;
-
-        // Update the icon based on the mode
-        if (isDarkMode) {
-            enableDarkMode();
-        } else {
-            disableDarkMode();
-        }
-    });
+  }
+  
+document.addEventListener('DOMContentLoaded', (event) => {
 
     const dropArea = document.getElementById('dropArea');
     const imageUpload = document.getElementById('imageUpload');

@@ -6,7 +6,7 @@
     justify-content: flex-end; /* Align items to the start (left side) */
     align-items: center;
     width: 100%;
-    background-color: #e5e5e5;
+    background-color: #1e1e1e;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -31,12 +31,14 @@
     text-decoration: none;
     transition: background-color 0.3s;
     border-radius: 50px;
-    width: 180px;
+    width: 220px;
     justify-content: center;
     cursor: pointer;
     height: 40px;
     position: relative;
-    margin-right: 30px;
+    margin-right: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
 }
 #discord-login:hover {
     background-color: #0056b3;
@@ -47,28 +49,10 @@
 }
 #nav .nav-item {
     text-decoration: none; /* Removes underline from links */
-    color: #2d2d30; /* Sets the text color */
+    color: #ffffff; /* Sets the text color */
     margin-right: 40px; /* Adds space between items */
     font-size: 1em; /* Sets the font size */
     align-items:center;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-}
-
-#darkModeToggle {
-    background-color: #007acc;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    position: relative; /* Change from absolute to relative */
-    margin-right: 60px; /* Match the left margin of the h1 */
 }

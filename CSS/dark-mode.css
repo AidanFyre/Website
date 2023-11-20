@@ -49,13 +49,13 @@ body.dark-mode ::placeholder {
     color: #bbbbbb;
 }
 
-body.dark-mode #darkModeIcon {
-    transform: scaleX(-1) rotate(30deg);
-}
 body.dark-mode #nav .nav-item {
     color: #ffffff !important; /* This will change the text color to white */
 }
 
+body.dark-mode #darkModeIcon {
+    transform: scaleX(-1) rotate(30deg);
+}
 
 #darkModeToggle:hover {
     background-color: #0056b3;
