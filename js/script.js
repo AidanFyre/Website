@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    const supabaseUrl = 'https://nzyovcfdebtdnqggzcyd.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56eW92Y2ZkZWJ0ZG5xZ2d6Y3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0NDA2MzEsImV4cCI6MjAxNjAxNjYzMX0.MLkopaa5jk0rgk5iy-RPWV6qwlvJSlbpqUfPFsxa2eI';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
     
     document.getElementById('discord-login').addEventListener('click', async () => {
         const { user, session, error } = await supabase.auth.signIn({
