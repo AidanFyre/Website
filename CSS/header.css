@@ -27,7 +27,6 @@
     background-color: #007acc; /* Your button color */
     color: white;
     text-align: center;
-    text-transform:uppercase;
     text-decoration: none;
     transition: background-color 0.3s;
     border-radius: 50px;
