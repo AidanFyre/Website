@@ -1,4 +1,4 @@
-import supabase from 'lib/supabaseClient';
+import supabase from 'lib/supabaseClient.js';
 
 export default function LoginPage() {
   const handleLogin = async () => {
