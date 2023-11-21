@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="CSS/header.css">
     <!-- Landing Page Styles -->
     <link rel="stylesheet" href="CSS/landing.css">
+    <!-- About Page Styles -->
+    <link rel="stylesheet" href="CSS/about.css">
     <!-- Content Styles -->
     <link rel="stylesheet" href="CSS/content.css">
     <!-- Request Form Styles -->
@@ -91,6 +93,21 @@
                 }, 1000, 'easeInCubic'); // Using 'easeInOutCubic' for a gradual easing effect
             });
         });
+    </script>
+    <script>
+        window.onload = () => {
+  const header = document.getElementById('header');
+  const currentPage = window.location.pathname;
+
+  if (currentPage === '/special-page.html') {
+    header.style.transform = 'translateY(-100%)';
+    setTimeout(() => {
+      header.style.transition = 'transform 0.5s ease';
+      header.style.transform = 'translateY(0)';
+    }, 100); // Delay to allow CSS to apply
+  }
+};
+
     </script>
 
 </body>
