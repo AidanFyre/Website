@@ -1,69 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Head Section: Stylesheets and Metadata -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    
-        <!-- Base Styles -->
-        <link rel="stylesheet" href="../CSS/base.css">
-        <!-- Header Styles -->
-        <link rel="stylesheet" href="../CSS/header.css">
-        <!-- Landing Page Styles -->
-        <link rel="stylesheet" href="../CSS/landing.css">
-        <!-- About Page Styles -->
-        <link rel="stylesheet" href="../CSS/about.css">
-        <!-- Content Styles -->
-        <link rel="stylesheet" href="../CSS/content.css">
-        <!-- Dark Mode Styles -->
-        <link rel="stylesheet" href="../CSS/dark-mode.css">
-        <!-- Request Form Styles -->
-        <link rel="stylesheet" href="../CSS/request-form.css">
-        <!-- Responsive Styles -->
-        <link rel="stylesheet" href="../CSS/responsive.css">
-    
-        <title>Apex Legends Renders</title>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #00bfae;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .content {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .about, .portfolio, .contact {
+            margin-bottom: 40px;
+        }
+        .about h2, .portfolio h2, .contact h2 {
+            color: #00bfae;
+            border-bottom: 2px solid #00bfae;
+            padding-bottom: 8px;
+        }
+        .portfolio-item {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-item h3 {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        .portfolio-item p {
+            padding: 0 10px 10px 10px;
+        }
+        .external-link, .contact a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #00bfae;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="header">
-        <h1>Apex Legends Renders</h1>
-        <nav id="nav">
-            <a href="../index.html" class="nav-item">Home</a>
-            <a href="about.html" class="nav-item">About</a>
-            <a href="requests.html" class="nav-item">Requests</a>
 
-            <!-- Add more nav items as needed -->
-        </nav>
-        <button id="discord-login">
-            <img src="../CSS/images/discord-logo.png" alt="Discord" style="height: 15px; margin-right: 10px;">
-            Login with Discord
-        </button>
-    </header>
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Showcasing My Best Work in a Minimal and Vibrant Way</p>
+</header>
 
-    <about id="about">
-        <h1>Apex Legends<br>Renders</h1>
+<div class="content">
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Brief biography or description of yourself, highlighting your skills, expertise, and professional background.</p>
+    </section>
 
-            <p>I'm excited to have you here. I offer a free and high-quality render service. Here, it's just me working behind the scenes to bring your visions to life. All you need to do is submit your request, and I'll put my skills to work, crafting the perfect render for you.
-        </p>
-        <h2>
-            Ready to make a request?
-        </h2>
-        <button class="rules-button">
-            Read our rules first.
-        </button>
-    </about>
-    <rules id="rules">
-        
-    </rules>
+    <section class="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/800x400" alt="Project 1">
+            <h3>Project Title 1</h3>
+            <p>Short description of Project 1 that provides insight into what it is about and its key features.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/800x400" alt="Project 2">
+            <h3>Project Title 2</h3>
+            <p>Short description of Project 2 that provides insight into what it is about and its key features.</p>
+        </div>
+    </section>
 
-    <footer>
-        <!-- Your footer content -->
-    </footer>
-    <!-- JavaScript -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>If you're interested in my work or have questions, don't hesitate to reach out.</p>
+        <a href="mailto:yourname@example.com">Send an Email</a>
+    </section>
+
+    <section>
+        <h2>Visit My External Site</h2>
+        <a class="external-link" href="https://your-externalsite.com" target="_blank">Go to My Site</a>
+    </section>
+</div>
+
 </body>
 </html>
